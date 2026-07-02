@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['reflective_jacket', 'safety_helmet']
+
+roboflow:
+  workspace: toji-fushigoro-s-workspace
+  project: vest-helmet-wlbch-utuij
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/toji-fushigoro-s-workspace/vest-helmet-wlbch-utuij/dataset/1

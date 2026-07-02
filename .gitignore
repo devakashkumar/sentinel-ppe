@@ -1,0 +1,59 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# ==========================
+# YOLO Training
+# ==========================
+runs/
+*.cache
+
+# ==========================
+# Dataset (keep metadata only)
+# ==========================
+dataset/train/
+dataset/valid/
+dataset/test/
+
+# ==========================
+# Outputs
+# ==========================
+outputs/
+logs/
+
+# ==========================
+# Model Files
+# Ignore all weights except final model
+# ==========================
+*.pt
+!model/ppe.pt
+
+# ==========================
+# Screenshots (optional)
+# ==========================
+screenshots/*.png
+screenshots/*.jpg
+screenshots/*.jpeg
+
+# ==========================
+# Temporary Files
+# ==========================
+*.log
+*.tmp
+*.bak
