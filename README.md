@@ -30,7 +30,6 @@ Since GitHub doesn't embed MP4 videos directly inside a README, you can watch th
 
 📹 **Demo Video:** `demo/sample_output.mp4`
 
-*(Replace the filename if your demo video has a different name.)*
 
 ---
 
