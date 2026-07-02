@@ -1,9 +1,9 @@
 # 🦺 Sentinel PPE AI
 
-> Real-time Personal Protective Equipment (PPE) Detection System for Industrial Safety using Computer Vision.
+> **A real-time AI-powered Personal Protective Equipment (PPE) Detection System** built using **YOLO**, **OpenCV**, and **Python** to improve workplace safety through intelligent computer vision.
 
-![Python](https://img.shields.io/badge/Python-3.12+-blue?style=for-the-badge&logo=python)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge&logo=opencv)
+![Python](https://img.shields.io/badge/Python-3.12+-blue?style=for-the-badge\&logo=python)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge\&logo=opencv)
 ![YOLO](https://img.shields.io/badge/YOLO-Ultralytics-red?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
@@ -11,85 +11,77 @@
 
 # 📌 Overview
 
-**Sentinel PPE AI** is an AI-powered industrial safety monitoring system that detects whether workers are wearing the required Personal Protective Equipment (PPE) in real time.
+**Sentinel PPE AI** is a modular computer vision application designed to detect whether workers are wearing the required Personal Protective Equipment (PPE) in real time.
 
-The current version focuses on:
+The current implementation detects:
 
-- 🦺 Safety Helmet Detection
-- 🦺 Reflective Jacket Detection
-- 🎥 Real-time Video Processing
-- 📦 Custom YOLO Model
-- 🎨 Modern Detection Overlay
-- 🎞️ Automatic Output Video Generation
+* 🪖 Safety Helmets
+* 🦺 Reflective Safety Jackets
 
-This project is being built as a production-style software system rather than a simple machine learning demo.
+Unlike a simple object detection demo, this project is being developed as a production-style AI application with clean architecture, modular components, and scalability for future industrial deployments.
+
+---
+
+# 🎥 Demo
+
+> **Live PPE Detection in Action**
+
+Since GitHub doesn't embed MP4 videos directly inside a README, you can watch the complete demo here:
+
+📹 **Demo Video:** `demo/sample_output.mp4`
+
+*(Replace the filename if your demo video has a different name.)*
 
 ---
 
 # ✨ Features
 
-- ✅ Custom-trained YOLO model
-- ✅ Helmet detection
-- ✅ Reflective jacket detection
-- ✅ Confidence score display
-- ✅ Stylish corner bounding boxes
-- ✅ Modern UI overlays
-- ✅ FPS Counter
-- ✅ Video playback
-- ✅ Automatic processed video saving
-- ✅ Modular architecture
-- ✅ Easy to extend
+* ✅ Custom-trained YOLO PPE Detection Model
+* ✅ Real-time Helmet Detection
+* ✅ Real-time Reflective Jacket Detection
+* ✅ Confidence Score Visualization
+* ✅ Modern Detection Overlay
+* ✅ Stylish Corner Bounding Boxes
+* ✅ Live FPS Counter
+* ✅ Video File Processing
+* ✅ Automatic Output Video Export
+* ✅ Modular Project Architecture
+* ✅ Easy to Extend and Maintain
 
 ---
 
-# 🖼️ Demo
+# 🏗️ Project Architecture
 
-## Input
-
-```
-videos/sample.mp4
-```
-
-↓
-
-## Processing
-
-```
-YOLO Detection
-↓
-
-Helmet Detection
-↓
-
-Reflective Jacket Detection
-↓
-
-Bounding Box Rendering
-↓
-
-FPS Counter
-```
-
-↓
-
-## Output
-
-```
-outputs/sample_output.mp4
+```text
+Video
+   │
+   ▼
+Camera Module
+   │
+   ▼
+YOLO Detector
+   │
+   ▼
+Detection Renderer
+   │
+   ▼
+FPS Overlay
+   │
+   ▼
+Display Window
+   │
+   ▼
+Saved Output Video
 ```
 
 ---
 
 # 📁 Project Structure
 
-```
-Sentinel-PPE-AI
+```text
+sentinel-ppe
 │
 ├── dataset/
-│   ├── train/
-│   ├── valid/
-│   ├── test/
-│   └── data.yaml
 │
 ├── model/
 │   └── ppe.pt
@@ -100,41 +92,48 @@ Sentinel-PPE-AI
 │
 ├── src/
 │   ├── camera/
-│   ├── detection/
 │   ├── config/
+│   ├── detection/
 │   ├── utils/
 │   └── pipeline.py
 │
 ├── tests/
 │
 ├── videos/
-│   ├── sample.mp4
-│   └── sample2.mp4
 │
 ├── main.py
-├── README.md
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-# 🧠 Model
+# 🧠 Model Performance
 
 The project uses a custom-trained **Ultralytics YOLO** object detection model.
 
-Detected classes:
+### Detected Classes
 
-- Safety Helmet
-- Reflective Jacket
+* Safety Helmet
+* Reflective Jacket
 
-Current validation performance:
+### Validation Metrics
 
-| Metric | Score |
-|---------|--------|
-| Precision | 90.9% |
-| Recall | 87.6% |
-| mAP@50 | 94.3% |
-| mAP@50-95 | 71.2% |
+| Metric    |     Score |
+| --------- | --------: |
+| Precision | **90.9%** |
+| Recall    | **87.6%** |
+| mAP@50    | **94.3%** |
+| mAP@50-95 | **71.2%** |
+
+---
+
+# 🛠️ Tech Stack
+
+* Python
+* OpenCV
+* Ultralytics YOLO
+* NumPy
 
 ---
 
@@ -143,22 +142,17 @@ Current validation performance:
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/sentinel-ppe-ai.git
+git clone https://github.com/devakashkumar/sentinel-ppe.git
+cd sentinel-ppe
 ```
 
-Enter the project
-
-```bash
-cd sentinel-ppe-ai
-```
-
-Create virtual environment
+Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate
+Activate the environment
 
 ### Linux / macOS
 
@@ -180,9 +174,9 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Running
+# ▶️ Running the Project
 
-Simply execute
+Run the application
 
 ```bash
 python main.py
@@ -190,23 +184,25 @@ python main.py
 
 The application will:
 
-- Load the trained model
-- Open the selected sample video
-- Detect PPE in every frame
-- Display the processed video
-- Save the processed output automatically
+* Load the trained PPE model
+* Process the selected input video
+* Detect helmets and reflective jackets
+* Display detections in real time
+* Render confidence scores
+* Show FPS
+* Automatically save the processed output video
 
 ---
 
-# 📹 Selecting Another Video
+# 🎬 Using Another Video
 
-Open
+Open:
 
-```
+```text
 src/config/settings.py
 ```
 
-Change
+Modify
 
 ```python
 VIDEO_NAME = "sample.mp4"
@@ -230,62 +226,57 @@ python main.py
 
 Processed videos are automatically saved inside
 
-```
+```text
 outputs/
 ```
 
 Example
 
-```
+```text
 outputs/
 ├── sample_output.mp4
-└── sample2_output.mp4
+├── sample2_output.mp4
+└── sample3_output.mp4
 ```
-
----
-
-# 🛠️ Tech Stack
-
-- Python
-- OpenCV
-- Ultralytics YOLO
-- NumPy
 
 ---
 
 # 🚀 Roadmap
 
-### ✅ Current
+### Current
 
-- Custom YOLO Model
-- PPE Detection
-- Video Processing
-- Output Video Saving
-- Modern Detection Overlay
+* ✅ Custom YOLO PPE Model
+* ✅ Video Processing Pipeline
+* ✅ Real-time Detection
+* ✅ Modern Detection UI
+* ✅ Automatic Video Export
 
-### 🔄 Next
+### Upcoming
 
-- Worker Tracking
-- Worker IDs
-- PPE Compliance Engine
-- Missing PPE Alerts
-- Violation Screenshots
-- SQLite Logging
-- Analytics Dashboard
-- Report Generation
-- Live Webcam Support
-- Multi-camera Support
+* 🔄 Worker Tracking
+* 🔄 Unique Worker IDs
+* 🔄 PPE Compliance Engine
+* 🔄 Violation Detection
+* 🔄 Screenshot Capture
+* 🔄 SQLite Database
+* 🔄 Analytics Dashboard
+* 🔄 Incident Reports
+* 🔄 Webcam Support
+* 🔄 Multi-Camera Monitoring
 
 ---
 
 # 📸 Screenshots
 
-Add screenshots here after running the project.
+Add screenshots inside the `screenshots/` directory.
 
-```
+Example:
+
+```text
 screenshots/
 ├── detection_1.png
 ├── detection_2.png
+├── detection_3.png
 └── dashboard.png
 ```
 
@@ -293,22 +284,27 @@ screenshots/
 
 # 🤝 Contributing
 
-Contributions, ideas, and improvements are welcome.
+Contributions, feature suggestions, and improvements are always welcome.
 
-Feel free to fork the repository and submit a pull request.
+If you'd like to improve the project:
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
 # 👨‍💻 Author
 
-**Sky**
+**Akash Kumar**
 
-Building practical AI systems with a focus on real-world computer vision applications.
+Passionate about building real-world AI applications, computer vision systems, and scalable software projects.
 
-If you found this project useful, consider giving it a ⭐ on GitHub!
+If you found this project helpful, consider giving it a ⭐ on GitHub.
